@@ -1,19 +1,21 @@
-# Placeholder; should be replaced by introspected schema via curl or relay-compiler script.
-# Run after backend is up:
-# curl -X POST http://localhost:8080/graphql -H "Content-Type: application/json" \
-#   -d '{"query":"{ __schema { types { name } } }"}'
+# Task Tracker GraphQL Schema
+# Auto-generated from backend implementation
 
 scalar UUID
+scalar DateTime
 
-enum TaskStatus { Pending Completed }
+enum TaskStatus { 
+  Pending 
+  Completed 
+}
 
 type TaskItem {
   id: UUID!
   title: String!
   description: String
   status: TaskStatus!
-  createdAt: String!
-  updatedAt: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
 type Query {

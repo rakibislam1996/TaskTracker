@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "relay": "relay-compiler --schema ./schema.graphql --src ./src",
-    "relay:watch": "relay-compiler --watch --schema ./schema.graphql --src ./src",
+    "relay": "relay-compiler",
+    "relay:watch": "relay-compiler --watch",
     "build": "npm run relay && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@adobe/react-spectrum": "^3.38.0",
-    "@react-aria/i18n": "^3.14.0",
+    "@adobe/react-spectrum": "^3.35.0",
+    "@react-aria/i18n": "^3.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-relay": "^16.2.0",
@@ -26,5 +26,11 @@
     "relay-compiler": "^16.2.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
+  },
+  "relay": {
+    "src": "./src",
+    "schema": "./schema.graphql",
+    "language": "typescript",
+    "artifactDirectory": "./src/__generated__"
   }
 }

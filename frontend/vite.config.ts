@@ -5,5 +5,11 @@ export default defineConfig({
   server: {
     port: 5173,
   },
-  plugins: [react()]
+  plugins: [
+    react({
+      babel: {
+        plugins: [['babel-plugin-relay', { artifactDirectory: './src/__generated__' }]]
+      }
+    })
+  ]
 });

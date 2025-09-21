@@ -6,6 +6,13 @@
 # dotenv files
 .env
 
+# Frontend specific
+frontend/node_modules/
+frontend/dist/
+frontend/src/__generated__/
+frontend/.env.local
+frontend/.env.production
+
 # User-specific files
 *.rsuser
 *.suo
